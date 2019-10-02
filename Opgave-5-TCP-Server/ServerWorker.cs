@@ -49,13 +49,13 @@ namespace Opgave_5_TCP_Server
 
                     switch (strings[0].ToLower())
                     {
-                        case "GetAll":
+                        case "getall":
                             books.ForEach(sw.WriteLine);
                             break;
-                        case "Get":
+                        case "get":
                             sw.WriteLine(books.Find(i => i.Isbn13 == strings[1]));
                             break;
-                        case "Save":
+                        case "save":
                             books.Add(new Book(strings[1], strings [2], Convert.ToInt32(strings[3]), strings[4]));
                             books.ForEach(sw.WriteLine);
                             break;
